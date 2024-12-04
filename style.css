@@ -1,0 +1,168 @@
+/* body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(126, 124, 124);
+}
+
+h1 {
+    text-align: center;  Center the text 
+    margin-bottom: 20px;  Add some space between the heading and the calculator 
+    color: white;  Optional: Change the color of the heading 
+}
+
+#Calculator { Ensure this matches the HTML id 
+    font-family: Arial, sans-serif;
+    background-color: grey; /* Change background color to grey 
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+    padding: 20px; /* Add padding for better spacing 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility 
+}
+
+#display {
+    width: 100%;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: rgb(80, 80, 80);
+    color: white;
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100%;
+    height: 50px; /* Make buttons full width of the grid cell 
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+button:active {
+    background-color: hsl(0, 0%, 50%);
+}
+
+.operator-btn {
+    background-color: orange;
+}
+
+.operator-btn:hover {
+    background-color: rgb(235, 174, 61);
+}
+
+.operator-btn:active {
+    background-color: orange;
+} */
+ 
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(126, 124, 124);
+}
+
+h1 {
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space between the heading and the calculator */
+    color: white; /* Optional: Change the color of the heading */
+    font-size: 2rem; /* Responsive font size */
+}
+
+#Calculator {
+    font-family: Arial, sans-serif;
+    background-color: grey; /* Change background color to grey */
+    border-radius: 15px;
+    max-width: 90%; /* Make it responsive */
+    width: 400px; /* Set a max width */
+    overflow: hidden;
+    padding: 20px; /* Add padding for better spacing */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add shadow for better visibility */
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 3rem; /* Adjust font size for better visibility */
+    text-align: right; /* Align text to the right */
+    border: none;
+    background-color: rgb(80, 80, 80);
+    color: white;
+    box-sizing: border-box; /* Include padding in width */
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px;
+    padding: 25px;
+}
+
+button {
+    width: 100%;
+    height: 60px; /* Increased height for better touch interaction */
+    border-radius: 50px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 2rem; /* Adjust font size for better visibility */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s; /* Added transform for press effect */
+}
+
+button:active {
+    transform: scale(0.95); /* Slightly shrink button on press */
+}
+
+button:hover {
+    background-color: hsl(0, 0%, 40%);
+}
+
+.operator-btn {
+    background-color: orange;
+}
+
+.operator-btn:hover {
+    background-color: rgb(235, 174, 61);
+}
+
+.operator-btn:active {
+    background-color: orange;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 1.5rem; /* Smaller font size for smaller screens */
+    }
+
+    #display {
+        font-size: 2.5rem; /* Smaller font size for display */
+    }
+
+    button {
+        font-size: 1.5rem; /* Smaller font size for buttons */
+    }
+}
